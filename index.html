@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+
+       <title>Gauthier Miralles's Profile</title>
+       <!--ce qui se voit dans l'onglet-->
+       <meta name="description" content="This is the profile of Gauthier">
+       <!--ce qui apparaît sur google lorsque l'on fait une recherche-->
+       <meta charset="UTF-8">
+       <script src="https://kit.fontawesome.com/85852282f9.js" crossorigin="anonymous"></script>
+       <!--pour charger le kit d'icônes-->
+       <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+       <!--pour charger le pack de fonts pris sur google fonts ; attention à bien le mettre avant le lnk du css-->
+
+       <link rel="stylesheet" href="style.css">
+       <!--relier l'onglet style.css au head du html-->
+
+     </head>
+
+     <body>
+
+      <div class="container">
+
+
+        <div class="card-white" id="introduction">
+        	<h1> 
+        	Hello I'm Gauthier
+        	</h1>
+        	<img src="images/profile.jpg" class="img-circle" alt="Me">
+        	<p>
+        		Student at HEC
+        	</p>
+        	<a href="http://lewagon.com" class="btn-green">Discover Le Wagon</a>
+        </div>
+       
+             
+        <div class="card-white">
+             <h2>AI</h2>
+             <p> I am passionate about <strong>AI</strong> </p>
+        </div>
+
+        <div class="card-white">
+             <h2>Frontend Development</h2>
+             <p> I am passionate about <strong>Frontend Development</strong> </p>
+        </div>
+
+        <div class="card-white">
+             <h2>BJJ</h2>
+             <p>I am passionate about <strong>BJJ</strong> </p>
+        </div>
+
+        <div class="card-white">
+             <h2>Follow me</h2>
+
+             <ul class="list-inline">
+             	<li>
+             		<a href="http://facebook.com">
+             		<!--Facebook (soit possibilité de mettre un texte en écrivant Facebook, soit mettre à la place un <i...> pour mettre une icône-->
+             		<i class="fab fa-facebook-square"></i>
+            	</a>
+             	</li>
+             	<li>
+             		<a href="http://twitter.com">
+             			<i class="fab fa-twitter"></i>
+             		</a>
+             	</li>
+             	<li>
+             		<a href="http://instagram.com">
+             			<i class="fab fa-instagram"></i>
+             		</a>
+             	</li>
+             </ul>
+        </div>   
+           <!--
+             <p> 
+             you can <em>emphasize</em> some <strong>words</strong>
+             </p>
+            -->
+            <!--em met en itallique et strong met épaix-->
+
+
+             <!--
+             <form>
+                <input type="email">
+                <input type="password">
+                 <input type="submit" value="Sign up">
+              </form>
+               -->
+              <!--fait des cases où entrer adresse mail password et log-->
+
+        </body>
+
+    </div>
+    <!-- mettre une grande div et totues les autres à l'intérieur pour centrer le contenu de la page et donc utiliser la centering technique-->
+</html>
+
+
+<!-- DIV : ;
+-Utiliser div pour faire des box, des sections, des groupes où sont rassemblés par exemple photo+texte etc... 
+-spécifier width and height pour LE CONTENU de la case
+-margin :définit l'espace entre la case et l'espace qui entour la case
+-padding : espace entre le bord de la case et le contenu dans la case
+
+Pour le bord de div : 
+possibilité de déterminer chacun des bords en définissant l'épaisseur, son style et enfin sa couleur (dans l'odre de paramètres)
+on peut aussi le faire arrondi en déterminant un border radius (rayon du cercle dans le coin de la case + ou - grand pour un rebord + ou - arrondi) : (border-radius : 2px)
+on peut aussi définir une ombre : box-shadow : 2px 2px 3px blue  (pour décaler de 2px vers droite, 2px en bas, 3eme param pour intensité de ombre, 4eme pour couleur)
+
+Un exemple très utilisé dans bons designs : 
+background : white
+padding : 30 px  (medium space)
+border-radius : 4px (small radius)
+box-shadow : 0px 15px 35px rgb(50, ,50, 93, .1)  (transparent color) (stripe shadow - used in Stripe website)
+
+Autre technique : centering technique
+width : 300px (fix the width)
+margin : 0 auto (set automatic margins for left and right) (first param = for the top bottom margin, for second for the left right margin donc pour auto : meme sur droite et gauche)
+-->
+
+
+
+
+<!-- 
+<div style="
+    background: white;
+    padding: 60px;
+    margin: 50px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    border-radius: 4px;
+">
+        	<h1> 
+        	Hello I'm Gauthier
+        	</h1>
+        	<img src="images/profile.jpg" alt="Me">
+        	<p>
+        		Student at HEC
+        	</p>
+        	<a href="http://lewagon.com">Discover Le Wagon</a>
+        </div>
+Pour customiser direct sans css-->
+
+
+<!--
+SINON UTILISER id="exemple" puis dans le css utiliser #exemple{} pour customiser chacun des éléments sans tous les customsier à la fois (class ou id) 
+pour classe utiliser .exemple {}
+
+id: for a specific design that is applied once (resizing, adjusting margins, etc.)
+class: for a generic design that is re-used in the website (centering text, making images circular, etc…)Possibilité de combiner les 2
+
+SI LES 2 SONT UTILISES POUR 1 ELEMENT ET DANS LE CSS ON MET UNE COULEUR DIFFERENTE POUR ID ET CLASS, LA COULEUR SERA CELLE DE L ID CAR + SPECIFIQUE!
+( p{} moins specifique que .element-design qui est moins spécifique que #element{})
+-->
+
+
+<!--
+	CONVENTIONS POUR NOMMER CLASSES :
+
+	.element-design {}
+
+	exemple : .text-center{}
+-->
+
+<!--
+	COMBINER HTML CSS POUR CLASSES : 
+	html : 
+	<body>
+		<p>This paragraph is not justify</p>
+		<p class="text-justify">This one is</p>
+	    <p class="text-justify">This also</p>
+	</body>
+
+	AVEC CSS : 
+	.text-justify {text-align : justify}
+-->
+
+
+<!--
+	POUR SELECTIONNER LES ELEMENTS DANS UNE DIV id :
+    
+    <body>
+     <div id="banner">
+       <h1>Le Wagon</h1>
+       <p>We bring tech</p>
+     </div>
+    </body>
+
+    Avec CSS : 
+    #banner h1 {color : white}
+-->
+
+    

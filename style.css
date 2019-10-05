@@ -1,0 +1,181 @@
+body {
+   background-color: #F6F9FC;
+   color : rgb(50,50,50);
+   font-family: 'Lora', serif;
+   font-size : 17px;
+}
+/*ici permet d'obtenir un gris en 230 230 230 clair car sur 255*/
+/*font family pour la police est le css property pour définir la police (font-family : Courier ou Helvetica ou Times....)*/
+/*souvent pour que texte soit lisible on met 16px*/
+
+h1, h2, h3{font-family: 'Roboto', sans-serif;
+}
+
+h1{
+	color: #24B47E;
+	font-weight : 900;
+	font-size: 32px;
+}
+/* font weight épaisseur de 100 à 900 ou lighter, normal...*/
+/*letter spacing définit l'espace entre les lettres*/
+/*pour faire experimentations, jouer directement sur inspecter sur la page google, évite les allers retours*/
+
+h2{
+	color: #5533FF;
+	font-weight : lighter;
+	font-size: 24px ;
+	font-weight : 300;
+}
+
+/*IMPORTANT : si on affecte à h1 et h2 une propriété commune (ici la police), on peut plutôt faire :
+h1,h2 {font-family : Courier}    Evite de répéter*/
+
+
+/*s'occuper des liens maintenant*/
+
+a{
+	text-decoration: none;
+	color : #24B47E;
+	font-family: 'Roboto', sans-serif;
+	font-weight : 600;
+	font-size : 16px ;
+	transition color : 0.3s ease ;
+}
+/*text-decoration : none permet d'enlever la décoration des liens, donc enlever traits en dessous...*/
+
+
+/* Pour modifier qqch lorsqu'on passe dessus (effet hover)*/
+a:hover {
+	color: black
+	/*font-size : 50px*/;
+}
+
+
+
+
+/*Pour chopper meilleures couleurs (faites par designers, on peut récupérer facilement leur numéro #F64... et les utiliser direct) aller sur http://colorhunt.co*/
+/* ont peut aussi utiliser http://coolors.co   --Pour ici trouver en fonction de couleurs qu'on aime, celles qui vont ensemble*/
+/*sinon pour vraiment utiliser exactement ColorZilla ou Stripe (pour utiliser pipette partout chopper couleurs qu'on aime!) (stripe plus précis)*/
+
+
+/*Utiliser google fonts pour chopper des fonts cool*/
+
+
+
+/* DIV : ;
+-Utiliser div pour faire des box, des sections, des groupes où sont rassemblés par exemple photo+texte etc... 
+-spécifier width and height pour LE CONTENU de la case
+-margin :définit l'espace entre la case et l'espace qui entour la case
+-padding : espace entre le bord de la case et le contenu dans la case
+
+Pour le bord de div : 
+possibilité de déterminer chacun des bords en définissant l'épaisseur, son style et enfin sa couleur (dans l'odre de paramètres)
+on peut aussi le faire arrondi en déterminant un border radius (rayon du cercle dans le coin de la case + ou - grand pour un rebord + ou - arrondi) : (border-radius : 2px)
+on peut aussi définir une ombre : box-shadow : 2px 2px 3px blue  (pour décaler de 2px vers droite, 2px en bas, 3eme param pour intensité de ombre, 4eme pour couleur)
+
+Un exemple très utilisé dans bons designs : 
+background : white
+padding : 30 px  (medium space)
+border-radius : 4px (small radius)
+box-shadow : 0px 15px 35px rgb(50, ,50, 93, .1)  (transparent color) (stripe shadow - used in Stripe website)
+
+Autre technique : centering technique
+width : 300px (fix the width)
+margin : 0 auto (set automatic margins for left and right) (first param = for the top bottom margin, for second for the left right margin donc pour auto : meme sur droite et gauche) */
+
+
+/* CUSTOM DESIGN WITH CLASS (99% du taff à faireg*/
+
+.container {
+	width : 700px;
+	margin : 40px auto;
+
+}
+
+/*Responsivité sur différents appareils*/
+
+/*Media queries : un moyen de mettre une condition sur css code :
+exemple : 
+@media (max-width : 720px) {
+       container {color : red;}
+       }
+=> applique seulement lorsque screen width < 720 px */
+
+
+/* Ici, on veut adapter lorsque l'on passe à un appareil très petit écran comme portable : */
+
+@media (max-width: 600px) {
+	.container {
+		width : 400px;
+	}
+	#introduction img {
+		width : 200px;
+	}
+}
+
+/* Puis pour une tablette, par exemple : */
+@media (max-width: 900px) {
+	.container {
+		width : 600px;
+	}
+
+}
+
+
+.card-white {
+	background-color : white;
+	padding : 40px;
+	box-shadow : 0px 10px 30px rgba(0,0,0,0.1);
+	border-radius : 4px;
+	margin : 20px;
+	text-align : center;
+}
+
+.img-circle {
+	border-radius : 50%;
+}
+
+
+.btn-green {
+	background-color : #24B47E;
+	color : white;
+	padding : 15px 20px;
+	border-radius : 4px;
+}
+
+.btn-green:hover {
+	background-color : black;
+	color : white;
+}
+
+
+.list-inline {
+	list-style : none /*pour enlever les bullet points*/;
+	padding-left : 0px /*pour retirer l'espace restant entre la case et l'icône dedans*/;
+}
+
+.list-inline li {
+	display : inline;
+	padding : 10px;
+}
+
+.list-inline i {
+	font-size : 50px;
+	color : rgb(230,230,230);
+}
+
+.list-inline i:hover{
+	color : black;
+}
+
+
+/*DESIGN ADJUSTMENT USING ID (1% du taff restant)*/
+#introduction p {
+	margin-bottom : 40px ;
+}
+
+
+
+
+
+
